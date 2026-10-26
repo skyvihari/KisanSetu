@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #F8FAFC;
+  color: #1E293B;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Subtle badge for clearly identified demonstration data. */
+.demo-badge {
+  @apply inline-flex items-center gap-1.5 rounded-full bg-status-pending/10 px-2.5 py-1 text-[10px] font-bold text-status-pending border border-status-pending/30 tracking-wide uppercase;
+}
+
+/* Accessibly styled inputs & selects */
+input, select, textarea {
+  @apply w-full rounded-lg border border-gov-border bg-white px-4 py-3 text-gov-text-main placeholder-gov-text-muted focus:border-gov-green-deep focus:ring-2 focus:ring-gov-green-deep/15 transition-all duration-150 outline-none;
+}
+
+/* Accessibility outline */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  @apply outline-none ring-2 ring-gov-green-deep ring-offset-2;
+}
